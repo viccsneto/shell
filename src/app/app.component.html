@@ -337,7 +337,19 @@
     </svg>
 
   </div>
-
+  
+  <h2>Shell</h2>
+  <div class="card-container">
+    <a *ngFor="let key of objectKeys(buttons);" class="card" target="_blank" rel="noopener" (click)="ExecuteActionFromEntryName(key)">
+      <span>{{buttons[key].title}}</span>
+    </a>      
+  </div>
+  <div>
+    <span>Last Result was: </span>
+    <pre>
+      {{result}}
+    </pre>
+  </div>
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
